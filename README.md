@@ -20,7 +20,7 @@ yarn add svelte-barcode
 
 ```js
 <script>
-	import Barcode from '../../../src/index.js'; 
+  import Barcode from '../../../src/index.js'; 
 </script>
 
 <Barcode
