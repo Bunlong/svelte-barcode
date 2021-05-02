@@ -2,6 +2,8 @@
 
 A light-weight and high-performance component to generate barcode for Svelte.
 
+[![NPM](https://img.shields.io/npm/v/svelte-barcode.svg)](https://www.npmjs.com/package/svelte-barcode) [![Build Status](https://api.travis-ci.com/Bunlong/svelte-barcode.svg?branch=master)](https://travis-ci.com/Bunlong/svelte-barcode) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+
 ## 🔧 Install
 
 svelte-barcode is available on npm. It can be installed with the following command:
