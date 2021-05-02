@@ -18,7 +18,7 @@ svelte-barcode is available on yarn as well. It can be installed with the follow
 yarn add svelte-barcode --save
 ```
 
-**Note:** Install as a dev dependency ( `npm install svelte-barcode --dev` ) ( `yarn add svelte-select --dev` ) if using [Sapper](https://sapper.svelte.dev) to avoid a SSR error.
+**Note:** Install as a dev dependency ( `npm install svelte-barcode -D` ) ( `yarn add svelte-select --dev` ) if using [Sapper](https://sapper.svelte.dev) to avoid a SSR error.
 
 ## 💡 Usage
 
