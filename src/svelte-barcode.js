@@ -1,1 +1,3 @@
-export { default as default } from './Barcode.svelte';
+import Barcode from './Barcode.svelte';
+
+export default Barcode;

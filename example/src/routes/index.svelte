@@ -1,6 +1,6 @@
 <script>
 	import successkid from 'images/successkid.jpg';
-	import Barcode from '../../../src/svelte-barcode.js'; 
+	import Barcode from '../../../src/svelte-barcode.js';
 </script>
 
 <style>

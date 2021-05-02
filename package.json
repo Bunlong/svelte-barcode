@@ -1,6 +1,6 @@
 {
   "name": "svelte-barcode",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A light-weight and high-performance component to generate barcode for Svelte.",
   "author": "Bunlong <bunlong.van@gmail.com>",
   "license": "MIT",
