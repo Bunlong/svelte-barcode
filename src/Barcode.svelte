@@ -1,7 +1,6 @@
 <script>
-  import { onMount } from 'svelte';
+  import { onMount, tick } from 'svelte';
   import JsBarcode from 'jsbarcode';
-
   let barcode;
   export let value;
   export let elementTag = 'img';
@@ -24,7 +23,6 @@
   export let marginLeft = undefined;
   export let marginRight = undefined;
   export let flat = false;
-
   const options = {
     format,
     width,
@@ -46,8 +44,8 @@
     marginRight,
     flat,
   };
-
-  onMount(() => {
+  onMount(async () => {
+    await tick();
     JsBarcode(barcode, value, options);
   });
 </script>

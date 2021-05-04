@@ -2,7 +2,7 @@
   "name": "svelte-barcode",
   "version": "1.0.1",
   "description": "A light-weight and high-performance component to generate barcode for Svelte.",
-  "author": "Bunlong <bunlong.van@gmail.com>",
+  "author": "Bunlong",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -12,7 +12,7 @@
     "url": "https://github.com/Bunlong/svelte-barcode.git/issues"
   },
   "homepage": "https://github.com/Bunlong/svelte-barcode",
-  "svelte": "src/svelte-barcode.js",
+  "svelte": "src/index.js",
   "module": "dist/index.mjs",
   "main": "dist/index.js",
   "scripts": {
@@ -21,6 +21,7 @@
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^18.0.0",
     "@rollup/plugin-node-resolve": "^9.0.0",
     "rollup": "^2.0.0",
     "rollup-plugin-svelte": "^6.0.0",
@@ -37,8 +38,5 @@
   ],
   "dependencies": {
     "jsbarcode": "^3.11.3"
-  },
-  "browser": {
-    "fs": false
   }
 }

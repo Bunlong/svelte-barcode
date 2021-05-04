@@ -1,6 +1,6 @@
 {
-  "name": "svelte-barcode",
-  "description": "",
+  "name": "svelte-barcode-example",
+  "description": "A light-weight and high-performance component to generate barcode for Svelte.",
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",

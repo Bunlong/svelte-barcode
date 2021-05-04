@@ -1,6 +1,5 @@
 <script>
-	import successkid from 'images/successkid.jpg';
-	import Barcode from '../../../src/svelte-barcode.js';
+	import Barcode from '../../../src/index.js';
 </script>
 
 <style>
@@ -20,12 +19,6 @@
 		margin: 0 0 1em 0;
 	}
 
-	img {
-		width: 100%;
-		max-width: 400px;
-		margin: 0 0 1em 0;
-	}
-
 	p {
 		margin: 1em auto;
 	}
@@ -41,17 +34,12 @@
 	<title>Sapper project template</title>
 </svelte:head>
 
-<h1>Great success!</h1>
-
-<p>
-	<Barcode
-		value={"svelte-barcode"}
-		elementTag={"canvas"}
-	/>
-</p>
+<Barcode
+	value={"svelte-barcode"}
+	elementTag={"canvas"}
+/>
 
 <figure>
-	<img alt="Success Kid" src="{successkid}">
 	<figcaption>Have fun with Sapper!</figcaption>
 </figure>
 
