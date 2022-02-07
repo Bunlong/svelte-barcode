@@ -45,7 +45,7 @@ yarn add svelte-barcode --save
 />
 ```
 
-## Props
+## props
 
 <table>
   <thead>
@@ -87,7 +87,7 @@ yarn add svelte-barcode --save
 <table>
   <thead>
     <tr>
-      <th>Props</th>
+      <th>Options</th>
       <th>Type</th>
       <th>Default</th>
       <th>Require</th>
