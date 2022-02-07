@@ -3,24 +3,24 @@
 </script>
 
 <svelte:head>
-	<title>Svelte Barcode - svelte-barcode</title>
+  <title>Svelte Barcode - svelte-barcode</title>
 </svelte:head>
 
 <script>
-	let value = 'svelte-barcodedssdfds';
+  let value = 'svelte-barcodedssdfds';
 
   let elementTags = [
-		{ id: 'img', text: 'img' },
-		{ id: 'canvas', text: 'canvas' },
-		{ id: 'svg', text: 'svg' }
-	];
+    { id: 'img', text: 'img' },
+    { id: 'canvas', text: 'canvas' },
+    { id: 'svg', text: 'svg' }
+  ];
   let selectedElementTag;
 
   let formats = [
-		{ id: 'CODE128', text: 'CODE128' },
-		{ id: 'EAN13', text: 'EAN13' },
-		{ id: 'CODE39', text: 'CODE39' }
-	];
+    { id: 'CODE128', text: 'CODE128' },
+    { id: 'EAN13', text: 'EAN13' },
+    { id: 'CODE39', text: 'CODE39' }
+  ];
   let selectedFormat;
 
   let width = 2;
@@ -30,16 +30,16 @@
   let text = '';
 
   let textAligns = [
-		{ id: 'left', text: 'left' },
-		{ id: 'center', text: 'center' },
-		{ id: 'right', text: 'right' }
-	];
+    { id: 'left', text: 'left' },
+    { id: 'center', text: 'center' },
+    { id: 'right', text: 'right' }
+  ];
   let selectedTextAlign;
 
   let textPositions = [
-		{ id: 'bottom', text: 'bottom' },
-		{ id: 'top', text: 'top' },
-	];
+    { id: 'bottom', text: 'bottom' },
+    { id: 'top', text: 'top' },
+  ];
   let selectedTextPosition;
 
   let textMargin = 2;
@@ -52,9 +52,6 @@
 
   let margin = 10;
 
-  function handleSubmit() {
-		console.log();
-	}
 </script>
 
 <section>
@@ -195,24 +192,23 @@
       </div>
     </form>
   </div>
+
   <Barcode
     value={value}
     elementTag={selectedElementTag ? selectedElementTag.id : null}
-    options={
-      {
-        format: selectedFormat? selectedFormat.id : null,
-        width: width,
-        height: height,
-        text: text,
-        textAlign: selectedTextAlign? selectedTextAlign.id : null,
-        textPosition: selectedTextPosition? selectedTextPosition.id : null,
-        textMargin: textMargin,
-        fontSize: fontSize,
-        background: background,
-        lineColor: lineColor,
-        margin: margin,
-      }
-    }
+    options={{
+      format: selectedFormat ? selectedFormat.id : null,
+      width: width,
+      height: height,
+      text: text,
+      textAlign: selectedTextAlign ? selectedTextAlign.id : null,
+      textPosition: selectedTextPosition ? selectedTextPosition.id : null,
+      textMargin: textMargin,
+      fontSize: fontSize,
+      background: background,
+      lineColor: lineColor,
+      margin: margin,
+    }}
   />
 </section>
 
@@ -223,13 +219,6 @@
     justify-content: center;
     align-items: center;
     flex: 1;
-  }
-
-  .welcome {
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding: 0 0 calc(100% * 495 / 2048) 0;
   }
 
   .main {
