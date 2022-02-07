@@ -1,52 +1,41 @@
 <script>
-  import { onMount, tick } from 'svelte';
+  import { onMount, tick, afterUpdate } from 'svelte';
   import JsBarcode from 'jsbarcode';
+
   let barcode;
   export let value;
   export let elementTag = 'img';
-  export let format = 'CODE128';
-  export let width = 2;
-  export let height = 100;
-  export let displayValue = true;
-  export let text = undefined;
-  export let fontOptions = '';
-  export let font = 'monospace';
-  export let textAlign = 'center';
-  export let textPosition = 'bottom';
-  export let textMargin = 2;
-  export let fontSize = 20;
-  export let background = '#ffffff';
-  export let lineColor = '#000000';
-  export let margin = 10;
-  export let marginTop = undefined;
-  export let marginBottom = undefined;
-  export let marginLeft = undefined;
-  export let marginRight = undefined;
-  export let flat = false;
-  const options = {
-    format,
-    width,
-    height,
-    displayValue,
-    text,
-    fontOptions,
-    font,
-    textAlign,
-    textPosition,
-    textMargin,
-    fontSize,
-    background,
-    lineColor,
-    margin,
-    marginTop,
-    marginBottom,
-    marginLeft,
-    marginRight,
-    flat,
+  export let options;
+  const defaultOptions = {
+    format: 'CODE128',
+    width: 2,
+    height: 100,
+    displayValue: true,
+    text: undefined,
+    fontOptions: '',
+    font: 'monospace',
+    textAlign: 'center',
+    textPosition: 'bottom',
+    textMargin: 2,
+    fontSize: 20,
+    background: '#ffffff',
+    lineColor: '#000000',
+    margin: 10,
+    marginTop: undefined,
+    marginBottom: undefined,
+    marginLeft: undefined,
+    marginRight: undefined,
+    flat: true,
   };
+
   onMount(async () => {
     await tick();
-    JsBarcode(barcode, value, options);
+    JsBarcode(barcode, value, optionsOA);
+  });
+
+  afterUpdate(async () => {
+    await tick();
+	  JsBarcode(barcode, value, Object.assign(defaultOptions, options));
   });
 </script>
 
