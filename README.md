@@ -18,7 +18,7 @@ svelte-barcode is available on yarn as well. It can be installed with the follow
 yarn add svelte-barcode --save
 ```
 
-**Note:** Install as a dev dependency ( `npm install svelte-barcode -D` ) ( `yarn add svelte-select --dev` ) if using [Sapper](https://sapper.svelte.dev) to avoid a SSR error.
+**Note:** Install as a dev dependency ( `npm install svelte-barcode -D` ) ( `yarn add svelte-barcode --dev` ) if using [Sapper](https://sapper.svelte.dev) to avoid a SSR error.
 
 ## 💡 Usage
 
@@ -28,8 +28,20 @@ yarn add svelte-barcode --save
 </script>
 
 <Barcode
-  value={"svelte-barcode"}
-  elementTag={"canvas"}
+  value={'svelte-barcode'}
+  elementTag={'canvas'}
+  options={{
+    format: 'CODE128',
+    width: 2,
+    height: 100,
+    text: '',
+    textAlign: 'center',
+    textPosition: 'bottom',
+    textMargin: 2,
+    fontSize: 20,
+    background: '#ffffff',
+    lineColor: '#000000',
+  }}
 />
 ```
 
@@ -55,11 +67,34 @@ yarn add svelte-barcode --save
     </tr>
     <tr>
       <td>elementTag</td>
-      <td>"img" | "canvas" | "svg"</td>
-      <td>"img"</td>
+      <td>'img' | 'canvas' | 'svg'</td>
+      <td>'img'</td>
       <td>❌</td>
       <td></td>
     </tr>
+    <tr>
+      <td>options</td>
+      <td>any</td>
+      <td></td>
+      <td>❌</td>
+      <td>Options to generate.</td>
+    </tr>
+  </tbody>
+</table>
+
+## options
+
+<table>
+  <thead>
+    <tr>
+      <th>Props</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Require</th>
+      <th>Description</th>
+    </tr>
+  <thead>
+  <tbody>
     <tr>
       <td>format</td>
       <td>string?</td>
@@ -98,28 +133,28 @@ yarn add svelte-barcode --save
     <tr>
       <td>fontOptions</td>
       <td>string?</td>
-      <td><code>""</code></td>
+      <td><code>''</code></td>
       <td>❌</td>
       <td>With fontOptions you can add bold or italic text to the barcode.</td>
     </tr>
     <tr>
       <td>font</td>
       <td>string?</td>
-      <td><code>"monospace"</code></td>
+      <td><code>'monospace'</code></td>
       <td>❌</td>
       <td>Define the font used for the text in the generated barcode. This can be any default font or a font defined by a @font-face rule.</td>
     </tr>
     <tr>
       <td>textAlign</td>
       <td>string?</td>
-      <td><code>"center"</code></td>
+      <td><code>'center'</code></td>
       <td>❌</td>
       <td>Set the horizontal alignment of the text. Can be <code>left</code> / <code>center</code> / <code>right</code>.</td>
     </tr>
     <tr>
       <td>textPosition</td>
       <td>string?</td>
-      <td><code>"bottom"</code></td>
+      <td><code>'bottom'</code></td>
       <td>❌</td>
       <td>Set the vertical position of the text. Can be <code>bottom</code> / <code>top</code>.</td>
     </tr>
@@ -140,14 +175,14 @@ yarn add svelte-barcode --save
     <tr>
       <td>background</td>
       <td>string?</td>
-      <td><code>"#ffffff"</code></td>
+      <td><code>'#ffffff'</code></td>
       <td>❌</td>
       <td>Set the background of the barcode.</td>
     </tr>
     <tr>
       <td>lineColor</td>
       <td>string?</td>
-      <td><code>"#000000"</code></td>
+      <td><code>'#000000'</code></td>
       <td>❌</td>
       <td>Set the color of the bars and the text.</td>
     </tr>
