@@ -30,7 +30,7 @@
 
   onMount(async () => {
     await tick();
-    JsBarcode(barcode, value, optionsOA);
+    JsBarcode(barcode, value, defaultOptions);
   });
 
   afterUpdate(async () => {
